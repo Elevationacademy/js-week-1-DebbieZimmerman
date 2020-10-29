@@ -146,29 +146,33 @@
         this.money -= numBeans
     },
     drinkRequirements: {
-      latte: 10,
-      americano: 5,
-      doubleShot: 15,
-      frenchPress: 12
+      latte: {beanRequirement: 10, price: 5},
+      americano: {beanRequirement: 10, price: 5},
+      doubleShot: {beanRequirement: 10, price: 5},
+      frenchPress: {beanRequirement: 10, price: 5}
     },
   
     makeDrink: function (drinkType) {
-        if(this.beans < this.drinkRequirements[drinkType]) {
+        if(this.beans < this.drinkRequirements[drinkType].beanRequirement) {
             alert(`Sorry we don't have enough beans to make ${drinkType}`)
         }
-        if(this.drinkRequirements[drinkType] && this.beans >= this.drinkRequirements[drinkType]){
+        if(this.drinkRequirements[drinkType].beanRequirement && this.beans >= this.drinkRequirements[drinkType].beanRequirement){
             alert("sure")
-            this.beans -= this.drinkRequirements[drinkType]
+            this.beans -= this.drinkRequirements[drinkType].beanRequirement
         } 
-        if(!this.drinkRequirements[drinkType]) {
+        if(!this.drinkRequirements[drinkType].beanRequirement) {
             alert(`Sorry, we do not make ${drinkType}`)
         }
+    },
+    buyDrink: function (d) {
+        this.money += this.drinkRequirements[d].price
+        this.makeDrink(d)
     }
 }
 
-  console.log(coffeeShop.money)
-  coffeeShop.makeDrink("latte"); 
-  coffeeShop.makeDrink("americano");
-  coffeeShop.makeDrink("filtered"); //should alert/console "Sorry, we don't make filtered"
-  coffeeShop.makeDrink("doubleShot");
-  coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans";
+  coffeeShop.buyDrink("latte")
+//   coffeeShop.makeDrink("latte"); 
+//   coffeeShop.makeDrink("americano");
+//   coffeeShop.makeDrink("filtered"); //should alert/console "Sorry, we don't make filtered"
+//   coffeeShop.makeDrink("doubleShot");
+//   coffeeShop.makeDrink("frenchPress"); //should alert/console "Sorry, we're all out of beans";
