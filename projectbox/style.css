@@ -1,0 +1,73 @@
+/* #redbox {
+    height: 275px;
+    width: 400px;
+    background-color:crimson;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+}
+#whitebox {
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 75px;
+}
+.grey {
+    background-color: grey;
+    width: 75px;
+    height: 75px;
+}
+#greybox2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+} */
+
+/*chocolate bar1*/
+#blackbox {
+    height: 260px;
+    width: 520px;
+    position: relative;
+    background-color: black;
+    /* display: block; */
+}
+
+.box {
+    height: 124px;
+    width: 124px;
+    background-color: #66320E;
+    border: 3px solid black;
+    /* position: relative;
+    float: left; */
+ }
+
+#redline {
+    height: 2.5px;
+    width: 520px;
+    background-color: darkred;
+    position: relative;
+    display: block;
+    top: 128.5px; 
+}
+
+ #box1 {
+    float: right;
+}
+#box2 {
+    float: right;
+}#box3 {
+    float: right;
+}#box4 {
+    float: right;
+}#box5 {
+    float: left;
+}
+#box6 {
+    float: left;
+}
+#box7 {
+    float: left;
